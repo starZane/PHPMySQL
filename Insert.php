@@ -13,7 +13,7 @@
     <?php
     include "DbCon.php";
 
-    $stuid = 2016102501;
+    $stuid = $rows[0][0];
     foreach ($rows as $row){
         if ($row[0] == $stuid){
             $stuid++;
@@ -26,7 +26,6 @@
     <h3>添加学生信息</h3>
     <form action="DbCon.php?action=add" method="post">
         <input type="hidden" name="id" value="<?php echo $stuid;?>">
-        <?php echo $stuid;?>
         <table>
             <tr>
                 <td>姓名</td>
