@@ -44,6 +44,18 @@ switch ($_GET['action']){
         $pdo->exec($sql);
         echo $sql;
         header("Location:Students.php");
+    case 'reg':
+        $sql = "INSERT INTO users (username, password, admin) VALUES ('".$_POST['usr']."','".$_POST['pwd']."',0)";
+        $pdo->exec($sql);
+        echo $_POST['usr']."注册成功!请返回登录……";
+        header("Refresh:3;url=index.html");
 }
 
+?>
 
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>跳转</title>
+</head>
+</html>

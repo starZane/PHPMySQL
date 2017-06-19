@@ -52,7 +52,7 @@ foreach ($rows as $row){
             <td><input type="text" name="major" value="<?php echo $stu['4']?>"></td>
         </tr>
         <tr>
-            <td> </td>
+            <td><a href="Students.php">返回</td>
             <td><input type="submit" value="更新"></td>
             <td><input type="reset" value="重置"></td>
         </tr>
