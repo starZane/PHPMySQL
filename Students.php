@@ -5,13 +5,15 @@
  * Date: 2017/6/15
  * Time: 16:54
  */
-session_start();
-include "DbCon.php";
 ?>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>学生信息</title>
+    <?php
+    session_start();
+    include "DbCon.php";
+    ?>
     <script>
         function dodel(stuid) {
             var res = confirm('确认删除?')

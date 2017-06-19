@@ -5,22 +5,23 @@
  * Date: 2017/6/18
  * Time: 17:31
  */
-include "DbCon.php";
-
-$stu = null;
-foreach ($rows as $row){
-    if ($row[0] == $_GET['id']){
-        $stu = $row;
-    }
-}
-//echo $_GET['id'];
-
 ?>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title><?php echo $stu[1]?>信息修改</title>
+    <?php
+    include "DbCon.php";
 
+    $stu = null;
+    foreach ($rows as $row){
+        if ($row[0] == $_GET['id']){
+            $stu = $row;
+        }
+    }
+    //echo $_GET['id'];
+
+    ?>
 </head>
 
 <body>

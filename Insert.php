@@ -5,20 +5,21 @@
  * Date: 2017/6/18
  * Time: 20:50
  */
-include "DbCon.php";
-
-$stuid = 2016102501;
-foreach ($rows as $row){
-    if ($row[0] == $stuid){
-        $stuid++;
-    }
-}
 ?>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>管理</title>
+    <?php
+    include "DbCon.php";
 
+    $stuid = 2016102501;
+    foreach ($rows as $row){
+        if ($row[0] == $stuid){
+            $stuid++;
+        }
+    }
+    ?>
 </head>
 
 <body>

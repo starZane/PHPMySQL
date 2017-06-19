@@ -45,7 +45,13 @@ switch ($_GET['action']){
         echo $sql;
         header("Location:Students.php");
     case 'reg':
-        $sql = "INSERT INTO users (username, password, admin) VALUES ('".$_POST['usr']."','".$_POST['pwd']."',0)";
+        if (isset($_POST['admin'])){
+            $admin = $_POST['admin'];
+        }else{
+            $admin = 0;
+        }
+
+        $sql = "INSERT INTO users (username, password, admin) VALUES ('".$_POST['usr']."','".$_POST['pwd']."',".$admin.")";
         $pdo->exec($sql);
         echo $_POST['usr']."注册成功!请返回登录……";
         header("Refresh:3;url=index.html");
@@ -56,6 +62,6 @@ switch ($_GET['action']){
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>跳转</title>
+    <title>处理中……</title>
 </head>
 </html>

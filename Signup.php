@@ -5,12 +5,12 @@
  * Date: 2017/6/18
  * Time: 22:25
  */
-include "DbCon.php";
 ?>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>注册</title>
+    <?php include "DbCon.php";?>
     <script>
         function sub() {
             var content = document.getElementById("usr").value;
@@ -64,9 +64,13 @@ include "DbCon.php";
             <td><input type="password" name="repwd" id="repwd"></td>
         </tr>
         <tr>
+            <td>管理员</td>
+            <td><input type="checkbox" name="admin" id="admin" value="1"></td>
+        </tr>
+        <tr>
             <!--        <td> </td>-->
             <td><a href="index.html">返回</td>
-            <td><input type="submit" value="添加"></td>
+            <td><input type="submit" value="注册"></td>
             <td><input type="reset" value="重置"></td>
         </tr>
     </table>
