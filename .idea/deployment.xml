@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="Apache" deleteMissingItems="true" createEmptyFolders="true" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="Apache" deleteMissingItems="true" createEmptyFolders="true" uploadOnCheckin="7430c3ea-f465-43ce-af27-c5fd390e85f6" autoUploadExternalChanges="true">
     <serverData>
       <paths name="Apache">
         <serverdata>
           <mappings>
-            <mapping deploy="/myphp" local="$PROJECT_DIR$/../PHPMySQL" web="/myphp" />
+            <mapping deploy="/myphp" local="$PROJECT_DIR$" web="/myphp" />
           </mappings>
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="Apache" />
     <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
   </component>
 </project>
